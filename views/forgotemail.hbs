@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+ 
+  <title>Login</title>
+</head>
+<body>
+ <nav class="navbar navbar-expand-lg navbar-light bg-light" style="   background:royalblue !important;">
+  <a class="navbar-brand" href="#"><h1>Check Email</h1></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+</nav>
+
+<div class="container mt-4">
+<div class="card" style="width: 18rem;">
+<div class="card-header"> <h3>Enter Email</h3></div>
+  <div class="card-body">
+   <form action="/auth/forgotemail" method="post">
+     
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" placeholder="Enter email">
+  </div>
+  <input type="submit" class="btn btn-primary" >
+
+</form>
+  </div>
+
+</div>
+
+{{#if message}}
+<h4 class="alert-danger mt-4">{{message}}</h4>
+
+{{/if}}
+</div>
+
+
+
+</body>
+</html>
